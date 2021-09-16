@@ -32,9 +32,11 @@
   },
   "homepage": "https://github.com/Patrick-Jun/const-cli#readme",
   "template": {
-    "h5": "https://gitee.com/cnee/const-h5/repository/archive/master.zip",
-    "vue2": "https://gitee.com/cnee/const-vue2/repository/archive/master.zip",
-    "nest": "https://gitee.com/cnee/const-nest/repository/archive/master.zip",
-    "mp-wx": "https://gitee.com/cnee/const-mp-wx/repository/archive/master.zip"
+    "h5": "https://bitbucket.org/cnfe/const-h5/get/master.zip",
+    "vue2": "https://bitbucket.org/cnfe/const-vue2/get/master.zip",
+    "nest": "https://bitbucket.org/cnfe/const-nest/get/master.zip",
+    "mp-wx": "https://bitbucket.org/cnfe/const-mp-wx/get/master.zip",
+    "addon": "https://bitbucket.org/cnfe/const-addon/get/master.zip",
+    "laravel": "https://bitbucket.org/cnfe/const-laravel/get/master.zip"
   }
 }

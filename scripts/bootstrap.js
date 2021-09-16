@@ -7,10 +7,9 @@ program
 
 program
   // 初始化项目
-  .command('init <name> [otherDirs...]')
-  .description('generate a new project from a template')
+  .command('init <name> [type]')
+  .description('type: h5(default), vue2, nest, mp-wx, addon, laravel')
   .action((name, otherDirs) => {
-    const 
     // 查看是否有除init外的剩余参数
     if (otherDirs.length) {
       switch (otherDirs[0]) {
@@ -18,6 +17,8 @@ program
         case 'vue2':
         case 'nest':
         case 'mp-wx':
+        case 'addon':
+        case 'laravel':
           require('./init')(
             `direct:${require('../package').template[otherDirs[0]]}`,
             `${process.cwd()}/${name}`,
