@@ -11,10 +11,10 @@ const init PROJECJ_NAME [type]
 type:
 
 - `h5`: html5
-- `vue2`: vue2
-- `nest`: nest.js
+- `vue2`: vue2 `waiting`
+- `nest`: nest.js `waiting`
 - `mp-wx`: 微信小程序
-- `addon`: Chrome插件
+- `addon`: Chrome插件 `waiting`
 - `laravel`: Laravel
 - ...and more will be supported!
 

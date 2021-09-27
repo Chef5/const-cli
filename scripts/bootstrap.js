@@ -10,9 +10,10 @@ program
   .command('init <name> [type]')
   .description('type: h5(default), vue2, nest, mp-wx, addon, laravel')
   .action((name, otherDirs) => {
+    console.log(name, JSON.stringify(otherDirs));
     // 查看是否有除init外的剩余参数
-    if (otherDirs.length) {
-      switch (otherDirs[0]) {
+    if (otherDirs) {
+      switch (otherDirs) {
         case 'h5':
         case 'vue2':
         case 'nest':
@@ -20,7 +21,7 @@ program
         case 'addon':
         case 'laravel':
           require('./init')(
-            `direct:${require('../package').template[otherDirs[0]]}`,
+            `direct:${require('../package').template[otherDirs]}`,
             `${process.cwd()}/${name}`,
             {clone: false}
           );
