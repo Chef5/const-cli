@@ -5,28 +5,26 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [created]   
 
 jobs:
-  build:
+  publish-to-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout release branch code
+        uses: actions/checkout@v3
         with:
-          node-version: 16
-      - run: npm ci
+          fetch-depth: 1
 
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+          registry-url: https://registry.npmjs.org
+          
+      - run: npm install
+      
+      - name: Publish to NPM
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
