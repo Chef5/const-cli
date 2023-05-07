@@ -1,6 +1,6 @@
 {
   "name": "const-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "bin": {
     "const": "./bin/const.js"
